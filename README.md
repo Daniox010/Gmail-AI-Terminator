@@ -36,15 +36,17 @@ Option 1: From source code (for developers)
 Clone this repository.
 
 Make sure you have the required libraries installed:
-
+```
 Bash
 pip install customtkinter scikit-learn google-auth-oauthlib google-api-python-client joblib
+```
 Drop your credentials.json file (downloaded from Google Cloud Console) into the config/ folder.
 
 Run the main script:
-
+```
 Bash
 python GmailTerminator.py
+```
 Option 2: Ready-to-use Application (macOS)
 
 Using PyInstaller, the project can be built into a single .app file. The final package lands in the dist/ folder and can be launched with a single mouse click.
