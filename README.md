@@ -29,7 +29,8 @@ Gmail_Cleaner/
 ├── GmailTerminator.py  # Main executable file
 └── README.md           # This file
 ```
-🚀 How to use it?
+#🚀 How to use it?
+
 Option 1: From source code (for developers)
 
 Clone this repository.
