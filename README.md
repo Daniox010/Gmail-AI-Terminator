@@ -1,58 +1,54 @@
-🤖 Gmail AI Terminator
-Inteligentny asystent do sprzątania skrzynki pocztowej. Aplikacja łączy się z Twoim kontem Gmail, skanuje wiadomości i przy pomocy sztucznej inteligencji (Machine Learning) ocenia, czy dany mail to śmieć, czy coś ważnego.
+# 🤖 Gmail AI Terminator
 
-Koniec z ręcznym przeklikiwaniem setek newsletterów i spamu! 🧹✉️
+A smart assistant for cleaning up your inbox. The application connects to your Gmail account, scans messages, and uses Artificial Intelligence (Machine Learning) to evaluate whether a given email is spam or something important. 
 
-✨ Główne funkcje
-Integracja z Google API: Bezpieczne logowanie do konta Gmail przy użyciu standardu OAuth 2.0.
+No more manual clicking through hundreds of newsletters and junk mail! 🧹✉️
 
-Mózg AI: Wykorzystanie wytrenowanego modelu scikit-learn do analizy treści wiadomości.
+## ✨ Key Features
+* **Google API Integration:** Secure login to your Gmail account using the OAuth 2.0 standard.
+* **AI Brain:** Uses a trained `scikit-learn` model to analyze message content.
+* **Simple Interface:** Modern and eye-pleasing GUI created with `customtkinter`.
+* **Local Execution:** Privacy first – the model runs locally on your computer.
+* **Standalone Version:** Ability to build a ready-to-use application (e.g., for macOS) that runs without opening the terminal.
 
-Prosty interfejs: Nowoczesne i przyjemne dla oka GUI stworzone w customtkinter.
+## 🛠️ Technologies
+* Python 3.x
+* CustomTkinter (GUI)
+* Scikit-Learn / Joblib (Machine Learning)
+* Google Client Library (Gmail API)
+* PyInstaller (App building)
 
-Lokalne działanie: Prywatność przede wszystkim – model działa lokalnie na Twoim komputerze.
+## 📁 Project Structure
+We care about clean code! The directory structure looks like this:
 
-Wersja Standalone: Możliwość zbudowania gotowej aplikacji (np. na macOS), która działa bez odpalania terminala.
-
-🛠️ Technologie
-Python 3.x
-
-CustomTkinter (GUI)
-
-Scikit-Learn / Joblib (Machine Learning)
-
-Google Client Library (Gmail API)
-
-PyInstaller (Budowanie aplikacji)
-
-📁 Struktura projektu
-Dbamy o porządek w kodzie! Struktura katalogów wygląda następująco:
-
-Plaintext
+```text
 Gmail_Cleaner/
-├── config/             # Tutaj trzymane są klucze API i tokeny (ignorowane przez Git!)
-├── data/               # Tutaj znajduje się wytrenowany model AI (ai_model.pkl)
-├── src/                # Kod źródłowy (jeśli rozbijasz projekt na mniejsze pliki)
-├── GmailTerminator.py  # Główny plik uruchomieniowy
-└── README.md           # Ten plik
-🚀 Jak tego używać?
-Opcja 1: Z poziomu kodu (dla deweloperów)
+├── config/             # Holds API keys and tokens (ignored by Git!)
+├── data/               # Holds the trained AI model (ai_model.pkl)
+├── src/                # Source code (if you split the project into smaller files)
+├── GmailTerminator.py  # Main executable file
+└── README.md           # This file
+```
+🚀 How to use it?
+Option 1: From source code (for developers)
 
-Sklonuj to repozytorium.
+Clone this repository.
 
-Upewnij się, że masz zainstalowane wymagane biblioteki:
+Make sure you have the required libraries installed:
+
+Bash
 pip install customtkinter scikit-learn google-auth-oauthlib google-api-python-client joblib
+Drop your credentials.json file (downloaded from Google Cloud Console) into the config/ folder.
 
-Wrzuć swój plik credentials.json (pobrany z Google Cloud Console) do folderu config/.
+Run the main script:
 
-Odpal główny plik:
+Bash
 python GmailTerminator.py
+Option 2: Ready-to-use Application (macOS)
 
-Opcja 2: Gotowa Aplikacja (macOS)
+Using PyInstaller, the project can be built into a single .app file. The final package lands in the dist/ folder and can be launched with a single mouse click.
 
-Używając PyInstallera, projekt można zbudować do pojedynczego pliku .app. Gotowa paczka ląduje w folderze dist/ i można ją odpalać jednym kliknięciem myszy.
+⚠️ Important Security Information
+Files like credentials.json (your Google key) and token.json should NEVER be pushed to a public repository. The project has a properly configured .gitignore file that ensures this data stays only on your local machine.
 
-⚠️ Ważne informacje o bezpieczeństwie
-Pliki takie jak credentials.json (Twój klucz do Google) oraz token.json NIGDY nie powinny znaleźć się w publicznym repozytorium. Projekt ma odpowiednio skonfigurowany plik .gitignore, który dba o to, by te dane pozostały tylko na Twoim komputerze.
-
-Stworzone po to, by odzyskać czas stracony na czytanie spamu. 🍹
+Created to reclaim time lost on reading spam. 🍹
