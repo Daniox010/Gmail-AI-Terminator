@@ -31,27 +31,28 @@ Gmail_Cleaner/
 ```
 ## 🚀 How to use it?
 
-Option 1: From source code (for developers)
+### Option 1: From source code (for developers)
 
-Clone this repository.
+1. Clone this repository.
 
-Make sure you have the required libraries installed:
+2. Make sure you have the required libraries installed:
 ```
 Bash
 pip install customtkinter scikit-learn google-auth-oauthlib google-api-python-client joblib
 ```
-Drop your credentials.json file (downloaded from Google Cloud Console) into the config/ folder.
+3. Drop your credentials.json file (downloaded from Google Cloud Console) into the config/ folder.
 
-Run the main script:
+4. Run the main script:
 ```
 Bash
 python GmailTerminator.py
 ```
-Option 2: Ready-to-use Application (macOS)
+### Option 2: Ready-to-use Application (macOS)
 
 Using PyInstaller, the project can be built into a single .app file. The final package lands in the dist/ folder and can be launched with a single mouse click.
 
-⚠️ Important Security Information
+## ⚠️ Important Security Information
+
 Files like credentials.json (your Google key) and token.json should NEVER be pushed to a public repository. The project has a properly configured .gitignore file that ensures this data stays only on your local machine.
 
 Created to reclaim time lost on reading spam. 🍹
