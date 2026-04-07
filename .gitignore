@@ -1,0 +1,10 @@
+config/credentials.json
+config/token.json
+.gmail_token.json
+build/
+dist/
+*.spec
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
